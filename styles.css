@@ -1,0 +1,622 @@
+/* ********** Custom Properties ************ */
+
+:root {
+  --background: #f5f5f5;
+  --background-2: #eaf2fd;
+  --white-color: #fff;
+  --black-color: #000;
+  --gray-color: #c8c8c8;
+  --text-color: #464646;
+  --btn-color: #2a7ae4;
+  --font: "Raleway", sans-serif;
+}
+
+/* ************Reset *************** */
+
+html {
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: var(--font);
+  background-color: var(--background);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h3 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  font-family: var(--font);
+  color: var(--text-color);
+}
+
+textarea {
+  margin: 0;
+}
+
+/* ************* Utilities ************* */
+
+.btn {
+  display: inline-block;
+  font-size: 0.875rem;
+  border: thin solid var(--btn-color);
+  padding: 0.8rem;
+  color: var(--btn-color);
+}
+
+.btn-2 {
+  background-color: var(--btn-color);
+  color: var(--white-color);
+}
+
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2rem;
+  column-gap: 1rem;
+}
+
+.card {
+  background-color: var(--white-color);
+  padding: 1rem;
+  height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card h3 {
+  margin-top: 0.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+.input input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 0.125rem solid var(--gray-color);
+  font-size: 1.125rem;
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+}
+
+.input label {
+  padding-left: 0.5rem;
+  position: absolute;
+  left: 0;
+  bottom: 14px;
+  color: var(--gray-color);
+  font-size: 1.125rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input input:focus ~ label,
+.input input:valid ~ label {
+  transform: translateY(-16px);
+  font-size: 0.8rem;
+  color: var(--btn-color);
+}
+
+.input input:focus,
+.input input:valid {
+  border-color: var(--btn-color);
+}
+
+.input-container {
+  max-width: 100%;
+  /* max-width: 41rem; */
+  padding-bottom: 1rem;
+}
+
+.margins-top {
+  margin-top: 2rem;
+}
+
+.paddings {
+  padding: 0 1rem;
+}
+
+.section-1 {
+  margin-top: 2rem;
+}
+
+.section-2 {
+  margin-top: 5.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .paddings {
+    padding: 0 2rem;
+  }
+}
+
+/* ************* Site Styles ************* */
+
+/* ************ header ****************/
+.email-contact {
+  font-weight: bold;
+}
+
+.header {
+  padding-top: 1rem;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  font-size: 0.875rem;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo h2 {
+  font-size: 1rem;
+}
+
+.menu-nav {
+  display: none;
+}
+
+/* ************ home ****************/
+.description-home {
+  margin-top: 2rem;
+}
+
+.description-home h1 {
+  font-size: 1.375rem;
+}
+
+.description-home p {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-align: justify;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home img {
+  order: -1;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  object-fit: cover;
+}
+
+.socials-home {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+}
+.socials-home a {
+  padding-right: 0.3rem;
+}
+/* ************ Sobre mi ****************/
+
+.sobre-mi {
+  background-color: var(--background-2);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+/* *********** Skills ************* */
+/* *********** Hobbies ************* */
+/* *********** Formacion Academica ************* */
+.academy {
+  background-color: var(--background-2);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.academy h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.academy-card {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.academy-card .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.academy-card h3 {
+  margin-top: 0.5rem;
+}
+
+.academy-card .card img {
+  max-width: 150px;
+  height: auto;
+}
+
+.card-1 ~ * {
+  margin-top: 1rem;
+}
+
+/* *********** Experiencia profesional ************* */
+.experience h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-content h3 {
+  margin: 1rem 0 0.1rem 0;
+}
+
+.btn-container {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.btn-container:first-child {
+  margin: 1rem;
+}
+
+.btn-2 {
+  margin-left: 1rem;
+}
+
+/* *********** Contacto ************* */
+
+.contact {
+  background-color: var(--background-2);
+}
+
+.contact h2 {
+  padding-top: 2rem;
+}
+
+.contact-img-container {
+  display: none;
+}
+
+.contact-form input[type="submit"] {
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.textarea {
+  width: 100%;
+  height: 130px;
+  padding: 0.5rem;
+  resize: none;
+  font-size: 1.125rem;
+  outline: none;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 0.125rem solid var(--gray-color);
+}
+
+.textarea:focus {
+  border-color: var(--btn-color);
+}
+
+.textarea::placeholder {
+  color: var(--gray-color);
+}
+
+/* ************** Footer *************** */
+.footer {
+  text-align: center;
+  padding: 1rem;
+}
+.footer a {
+  color: var(--btn-color);
+}
+
+/* *********** Aviso *********** */
+.aviso {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aviso p {
+  padding: 2rem;
+  border-radius: 5px;
+  color: white;
+  background-color: #2a7ae4;
+}
+
+.aviso a {
+  color: white;
+  transition: font-size 0.3s ease;
+}
+
+.aviso a:hover {
+  font-size: 115%;
+}
+
+.none {
+  display: none;
+}
+/* ************* media queries ************** */
+
+@media screen and (min-width: 48em) {
+  /* ************ header ****************/
+  /* ************ home ****************/
+
+  .description-home {
+    margin-right: 4rem;
+  }
+
+  .description-home p {
+    font-size: 1rem;
+    line-height: 18px;
+  }
+
+  .home {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .home img {
+    order: 0;
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .socials-home {
+    font-size: 1rem;
+  }
+
+  /* ************ sobre mi ****************/
+  /* *********** Skills ************* */
+
+  /* *********** Hobbies ************* */
+  /* *********** Formacion Academica ************* */
+  .academy-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .academy-card {
+    margin: 0;
+  }
+
+  /* *********** Experiencia profesional ************* */
+  .experience-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .experience h2 {
+    font-size: 2rem;
+  }
+
+  /* *********** Contacto ************* */
+}
+
+@media screen and (min-width: 64em) {
+  /* ************ header ****************/
+  .header a {
+    font-size: 1rem;
+  }
+
+  .menu-nav {
+    display: flex;
+  }
+
+  .menu-nav a {
+    margin: 0 1rem;
+  }
+
+  .navbar {
+    display: flex;
+  }
+
+  .navbar .email-contact {
+    margin-left: 1rem;
+  }
+
+  /* ************ home ****************/
+  .description-home {
+    margin-top: 4rem;
+  }
+
+  .description-home h1 {
+    font-size: 3.25rem;
+  }
+
+  .description-home p {
+    font-size: 1.375rem;
+    line-height: 1.375rem;
+  }
+
+  .home img {
+    width: 23rem;
+    height: 23rem;
+  }
+
+  .socials-home {
+    justify-content: flex-start;
+  }
+
+  .socials-home a {
+    padding-right: 2.5rem;
+  }
+  /* ************ sobre mi ****************/
+  /* ************ Skills ****************/
+  .cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* *********** Hobbies ************* */
+  /* *********** Formacion Academica ************* */
+  .academy {
+    padding-bottom: 0.05rem;
+  }
+
+  .academy h2 {
+    font-size: 2rem;
+  }
+
+  .academy-card .card {
+    height: 286px;
+  }
+
+  .academy-cards {
+    margin-bottom: 5.125rem;
+    padding-bottom: 0;
+  }
+
+  /* *********** Experiencia profesional ************* */
+
+  .experience-content {
+    flex-direction: row;
+  }
+
+  .experience-content .content {
+    align-self: center;
+  }
+
+  .experience-content ~ .experience-content {
+    margin-top: 4rem;
+  }
+
+  .experience-content ~ .experience-content img {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+  .experience-content ~ .experience-content .content {
+    order: -1;
+  }
+  .experience-content img {
+    margin-right: 1rem;
+  }
+
+  .proyects-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* *********** Contacto ************* */
+  .contact .container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact-form input[type="submit"] {
+    /* margin: 0; */
+    margin-top: 0;
+    margin-bottom: 2.52rem;
+  }
+
+  .contact-img-container {
+    display: block;
+  }
+
+  .contact-form-container,
+  .contact-img-container {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .input-container {
+    margin-bottom: 1.54rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .home {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .experience-content {
+    justify-content: space-around;
+  }
+}
