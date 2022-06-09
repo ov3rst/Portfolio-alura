@@ -2,4 +2,4 @@
 
 ## portafolio personal
 
-aqui el portafolio de alura
+- [Click aqui para ver](https://ov3rst.github.io/Portfolio-alura/)
